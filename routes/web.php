@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\VendorController;
 
 Route::view('/', 'user.dashboard')->name('user.dashboard');
-// Route::get('/', function () {
-//     return 'Working 🚀';
-// });
+Route::get('/', function () {
+    return 'Working 🚀';
+});
 
 Route::view('dashboard', 'dashboard')->middleware(['auth', 'verified'])->name('dashboard');
 Route::view('/product', 'product.product')->middleware(['auth', 'verified'])->name('product');
